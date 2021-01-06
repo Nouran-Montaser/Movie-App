@@ -5,7 +5,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:movie_app/domain/genre/genre_result.dart';
 import 'package:movie_app/domain/i_movie_repository.dart';
-import 'package:movie_app/domain/movie_failure.dart';
+import 'package:movie_app/domain/failure.dart';
 
 part 'genre_watcher_event.dart';
 part 'genre_watcher_state.dart';
@@ -18,7 +18,7 @@ class GenreWatcherBloc extends Bloc<GenreWatcherEvent, GenreWatcherState> {
 
   GenreWatcherBloc(this._movieRepository): super(const GenreWatcherState.initial());
 
-  StreamSubscription<Either<MovieFailure, GenreResult>> _genreStreamSubscription;
+  StreamSubscription<Either<Failure, GenreResult>> _genreStreamSubscription;
 
   @override
   Stream<GenreWatcherState> mapEventToState(GenreWatcherEvent event,) async* {

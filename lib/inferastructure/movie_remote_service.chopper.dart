@@ -29,4 +29,11 @@ class _$MovieRemoteService extends MovieRemoteService {
     final $request = Request('GET', $url, client.baseUrl);
     return client.send<GenreResult, GenreResult>($request);
   }
+
+  @override
+  Future<Response<CastResponse>> getMovieCast(int id) {
+    final $url = 'movie/$id/credits';
+    final $request = Request('GET', $url, client.baseUrl);
+    return client.send<CastResponse, CastResponse>($request);
+  }
 }

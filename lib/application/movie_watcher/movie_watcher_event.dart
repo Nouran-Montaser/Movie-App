@@ -4,5 +4,5 @@ part of 'movie_watcher_bloc.dart';
 abstract class MovieWatcherEvent with _$MovieWatcherEvent {
   const factory MovieWatcherEvent.watchAllStarted() = _WatchAllStarted;
   const factory MovieWatcherEvent.watchUncompletedStarted() = _WatchUncompletedStarted;
-  const factory MovieWatcherEvent.movieReceived(Either<MovieFailure, KtList<Movie>> failureOrMovie) = _MovieReceived;
+  const factory MovieWatcherEvent.movieReceived(Either<Failure, KtList<Movie>> failureOrMovie) = _MovieReceived;
 }

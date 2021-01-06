@@ -7,7 +7,7 @@ import 'package:kt_dart/collection.dart';
 import 'package:meta/meta.dart';
 import 'package:movie_app/domain/i_movie_repository.dart';
 import 'package:movie_app/domain/movie/movie.dart';
-import 'package:movie_app/domain/movie_failure.dart';
+import 'package:movie_app/domain/failure.dart';
 
 part 'movie_watcher_event.dart';
 part 'movie_watcher_state.dart';
@@ -20,7 +20,7 @@ class MovieWatcherBloc extends Bloc<MovieWatcherEvent, MovieWatcherState> {
 
   MovieWatcherBloc(this._movieRepository): super(const MovieWatcherState.initial());
 
-  StreamSubscription<Either<MovieFailure, KtList<Movie>>> _movieStreamSubscription;
+  StreamSubscription<Either<Failure, KtList<Movie>>> _movieStreamSubscription;
 
   @override
   Stream<MovieWatcherState> mapEventToState(MovieWatcherEvent event,) async* {

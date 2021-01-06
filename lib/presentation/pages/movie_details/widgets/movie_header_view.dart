@@ -2,19 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/domain/movie/movie.dart';
 
-class MovieTitle extends StatelessWidget {
+class MovieHeader extends StatelessWidget {
   final Movie movie;
   final double padding;
 
-  MovieTitle(this.movie, this.padding);
+  MovieHeader(this.movie, this.padding);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(padding),
       child: Column(
-        // Default value for crossAxisAlignment is CrossAxisAlignment.center.
-        // We want to align title and description of recipes left:
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           if (movie.genres.length > 0) ...[

@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'genre_watcher_bloc.dart';
+part of 'movie_details_watcher_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -9,74 +9,77 @@ part of 'genre_watcher_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
-class _$GenreWatcherEventTearOff {
-  const _$GenreWatcherEventTearOff();
+class _$MovieDetailsWatcherEventTearOff {
+  const _$MovieDetailsWatcherEventTearOff();
 
 // ignore: unused_element
-  _WatchAllStarted watchAllStarted() {
-    return const _WatchAllStarted();
+  _WatchAllStarted watchAllStarted(int movieId) {
+    return _WatchAllStarted(
+      movieId,
+    );
   }
 
 // ignore: unused_element
-  _GenreReceived genresReceived(Either<Failure, GenreResult> failureOrGenre) {
-    return _GenreReceived(
-      failureOrGenre,
+  _CastReceived genresReceived(Either<Failure, CastResponse> failureOrCast) {
+    return _CastReceived(
+      failureOrCast,
     );
   }
 }
 
 // ignore: unused_element
-const $GenreWatcherEvent = _$GenreWatcherEventTearOff();
+const $MovieDetailsWatcherEvent = _$MovieDetailsWatcherEventTearOff();
 
-mixin _$GenreWatcherEvent {
+mixin _$MovieDetailsWatcherEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result watchAllStarted(),
+    @required Result watchAllStarted(int movieId),
     @required
-        Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+        Result genresReceived(Either<Failure, CastResponse> failureOrCast),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+    Result watchAllStarted(int movieId),
+    Result genresReceived(Either<Failure, CastResponse> failureOrCast),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result genresReceived(_GenreReceived value),
+    @required Result genresReceived(_CastReceived value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result genresReceived(_GenreReceived value),
+    Result genresReceived(_CastReceived value),
     @required Result orElse(),
   });
 }
 
-abstract class $GenreWatcherEventCopyWith<$Res> {
-  factory $GenreWatcherEventCopyWith(
-          GenreWatcherEvent value, $Res Function(GenreWatcherEvent) then) =
-      _$GenreWatcherEventCopyWithImpl<$Res>;
+abstract class $MovieDetailsWatcherEventCopyWith<$Res> {
+  factory $MovieDetailsWatcherEventCopyWith(MovieDetailsWatcherEvent value,
+          $Res Function(MovieDetailsWatcherEvent) then) =
+      _$MovieDetailsWatcherEventCopyWithImpl<$Res>;
 }
 
-class _$GenreWatcherEventCopyWithImpl<$Res>
-    implements $GenreWatcherEventCopyWith<$Res> {
-  _$GenreWatcherEventCopyWithImpl(this._value, this._then);
+class _$MovieDetailsWatcherEventCopyWithImpl<$Res>
+    implements $MovieDetailsWatcherEventCopyWith<$Res> {
+  _$MovieDetailsWatcherEventCopyWithImpl(this._value, this._then);
 
-  final GenreWatcherEvent _value;
+  final MovieDetailsWatcherEvent _value;
   // ignore: unused_field
-  final $Res Function(GenreWatcherEvent) _then;
+  final $Res Function(MovieDetailsWatcherEvent) _then;
 }
 
 abstract class _$WatchAllStartedCopyWith<$Res> {
   factory _$WatchAllStartedCopyWith(
           _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
       __$WatchAllStartedCopyWithImpl<$Res>;
+  $Res call({int movieId});
 }
 
 class __$WatchAllStartedCopyWithImpl<$Res>
-    extends _$GenreWatcherEventCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherEventCopyWithImpl<$Res>
     implements _$WatchAllStartedCopyWith<$Res> {
   __$WatchAllStartedCopyWithImpl(
       _WatchAllStarted _value, $Res Function(_WatchAllStarted) _then)
@@ -84,46 +87,66 @@ class __$WatchAllStartedCopyWithImpl<$Res>
 
   @override
   _WatchAllStarted get _value => super._value as _WatchAllStarted;
+
+  @override
+  $Res call({
+    Object movieId = freezed,
+  }) {
+    return _then(_WatchAllStarted(
+      movieId == freezed ? _value.movieId : movieId as int,
+    ));
+  }
 }
 
 class _$_WatchAllStarted implements _WatchAllStarted {
-  const _$_WatchAllStarted();
+  const _$_WatchAllStarted(this.movieId) : assert(movieId != null);
+
+  @override
+  final int movieId;
 
   @override
   String toString() {
-    return 'GenreWatcherEvent.watchAllStarted()';
+    return 'MovieDetailsWatcherEvent.watchAllStarted(movieId: $movieId)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _WatchAllStarted);
+    return identical(this, other) ||
+        (other is _WatchAllStarted &&
+            (identical(other.movieId, movieId) ||
+                const DeepCollectionEquality().equals(other.movieId, movieId)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(movieId);
+
+  @override
+  _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith =>
+      __$WatchAllStartedCopyWithImpl<_WatchAllStarted>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result watchAllStarted(),
+    @required Result watchAllStarted(int movieId),
     @required
-        Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+        Result genresReceived(Either<Failure, CastResponse> failureOrCast),
   }) {
     assert(watchAllStarted != null);
     assert(genresReceived != null);
-    return watchAllStarted();
+    return watchAllStarted(movieId);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+    Result watchAllStarted(int movieId),
+    Result genresReceived(Either<Failure, CastResponse> failureOrCast),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (watchAllStarted != null) {
-      return watchAllStarted();
+      return watchAllStarted(movieId);
     }
     return orElse();
   }
@@ -132,7 +155,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result genresReceived(_GenreReceived value),
+    @required Result genresReceived(_CastReceived value),
   }) {
     assert(watchAllStarted != null);
     assert(genresReceived != null);
@@ -143,7 +166,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result genresReceived(_GenreReceived value),
+    Result genresReceived(_CastReceived value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -154,90 +177,92 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   }
 }
 
-abstract class _WatchAllStarted implements GenreWatcherEvent {
-  const factory _WatchAllStarted() = _$_WatchAllStarted;
+abstract class _WatchAllStarted implements MovieDetailsWatcherEvent {
+  const factory _WatchAllStarted(int movieId) = _$_WatchAllStarted;
+
+  int get movieId;
+  _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith;
 }
 
-abstract class _$GenreReceivedCopyWith<$Res> {
-  factory _$GenreReceivedCopyWith(
-          _GenreReceived value, $Res Function(_GenreReceived) then) =
-      __$GenreReceivedCopyWithImpl<$Res>;
-  $Res call({Either<Failure, GenreResult> failureOrGenre});
+abstract class _$CastReceivedCopyWith<$Res> {
+  factory _$CastReceivedCopyWith(
+          _CastReceived value, $Res Function(_CastReceived) then) =
+      __$CastReceivedCopyWithImpl<$Res>;
+  $Res call({Either<Failure, CastResponse> failureOrCast});
 }
 
-class __$GenreReceivedCopyWithImpl<$Res>
-    extends _$GenreWatcherEventCopyWithImpl<$Res>
-    implements _$GenreReceivedCopyWith<$Res> {
-  __$GenreReceivedCopyWithImpl(
-      _GenreReceived _value, $Res Function(_GenreReceived) _then)
-      : super(_value, (v) => _then(v as _GenreReceived));
+class __$CastReceivedCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherEventCopyWithImpl<$Res>
+    implements _$CastReceivedCopyWith<$Res> {
+  __$CastReceivedCopyWithImpl(
+      _CastReceived _value, $Res Function(_CastReceived) _then)
+      : super(_value, (v) => _then(v as _CastReceived));
 
   @override
-  _GenreReceived get _value => super._value as _GenreReceived;
+  _CastReceived get _value => super._value as _CastReceived;
 
   @override
   $Res call({
-    Object failureOrGenre = freezed,
+    Object failureOrCast = freezed,
   }) {
-    return _then(_GenreReceived(
-      failureOrGenre == freezed
-          ? _value.failureOrGenre
-          : failureOrGenre as Either<Failure, GenreResult>,
+    return _then(_CastReceived(
+      failureOrCast == freezed
+          ? _value.failureOrCast
+          : failureOrCast as Either<Failure, CastResponse>,
     ));
   }
 }
 
-class _$_GenreReceived implements _GenreReceived {
-  const _$_GenreReceived(this.failureOrGenre) : assert(failureOrGenre != null);
+class _$_CastReceived implements _CastReceived {
+  const _$_CastReceived(this.failureOrCast) : assert(failureOrCast != null);
 
   @override
-  final Either<Failure, GenreResult> failureOrGenre;
+  final Either<Failure, CastResponse> failureOrCast;
 
   @override
   String toString() {
-    return 'GenreWatcherEvent.genresReceived(failureOrGenre: $failureOrGenre)';
+    return 'MovieDetailsWatcherEvent.genresReceived(failureOrCast: $failureOrCast)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _GenreReceived &&
-            (identical(other.failureOrGenre, failureOrGenre) ||
+        (other is _CastReceived &&
+            (identical(other.failureOrCast, failureOrCast) ||
                 const DeepCollectionEquality()
-                    .equals(other.failureOrGenre, failureOrGenre)));
+                    .equals(other.failureOrCast, failureOrCast)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(failureOrGenre);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failureOrCast);
 
   @override
-  _$GenreReceivedCopyWith<_GenreReceived> get copyWith =>
-      __$GenreReceivedCopyWithImpl<_GenreReceived>(this, _$identity);
+  _$CastReceivedCopyWith<_CastReceived> get copyWith =>
+      __$CastReceivedCopyWithImpl<_CastReceived>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
-    @required Result watchAllStarted(),
+    @required Result watchAllStarted(int movieId),
     @required
-        Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+        Result genresReceived(Either<Failure, CastResponse> failureOrCast),
   }) {
     assert(watchAllStarted != null);
     assert(genresReceived != null);
-    return genresReceived(failureOrGenre);
+    return genresReceived(failureOrCast);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result watchAllStarted(),
-    Result genresReceived(Either<Failure, GenreResult> failureOrGenre),
+    Result watchAllStarted(int movieId),
+    Result genresReceived(Either<Failure, CastResponse> failureOrCast),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (genresReceived != null) {
-      return genresReceived(failureOrGenre);
+      return genresReceived(failureOrCast);
     }
     return orElse();
   }
@@ -246,7 +271,7 @@ class _$_GenreReceived implements _GenreReceived {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result genresReceived(_GenreReceived value),
+    @required Result genresReceived(_CastReceived value),
   }) {
     assert(watchAllStarted != null);
     assert(genresReceived != null);
@@ -257,7 +282,7 @@ class _$_GenreReceived implements _GenreReceived {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result genresReceived(_GenreReceived value),
+    Result genresReceived(_CastReceived value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -268,16 +293,16 @@ class _$_GenreReceived implements _GenreReceived {
   }
 }
 
-abstract class _GenreReceived implements GenreWatcherEvent {
-  const factory _GenreReceived(Either<Failure, GenreResult> failureOrGenre) =
-      _$_GenreReceived;
+abstract class _CastReceived implements MovieDetailsWatcherEvent {
+  const factory _CastReceived(Either<Failure, CastResponse> failureOrCast) =
+      _$_CastReceived;
 
-  Either<Failure, GenreResult> get failureOrGenre;
-  _$GenreReceivedCopyWith<_GenreReceived> get copyWith;
+  Either<Failure, CastResponse> get failureOrCast;
+  _$CastReceivedCopyWith<_CastReceived> get copyWith;
 }
 
-class _$GenreWatcherStateTearOff {
-  const _$GenreWatcherStateTearOff();
+class _$MovieDetailsWatcherStateTearOff {
+  const _$MovieDetailsWatcherStateTearOff();
 
 // ignore: unused_element
   Initial initial() {
@@ -290,9 +315,9 @@ class _$GenreWatcherStateTearOff {
   }
 
 // ignore: unused_element
-  LoadSuccess loadSuccess(GenreResult genre) {
+  LoadSuccess loadSuccess(CastResponse cast) {
     return LoadSuccess(
-      genre,
+      cast,
     );
   }
 
@@ -305,21 +330,21 @@ class _$GenreWatcherStateTearOff {
 }
 
 // ignore: unused_element
-const $GenreWatcherState = _$GenreWatcherStateTearOff();
+const $MovieDetailsWatcherState = _$MovieDetailsWatcherStateTearOff();
 
-mixin _$GenreWatcherState {
+mixin _$MovieDetailsWatcherState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loadSuccess(GenreResult genre),
+    @required Result loadSuccess(CastResponse cast),
     @required Result loadFailure(Failure movieFailure),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loadSuccess(GenreResult genre),
+    Result loadSuccess(CastResponse cast),
     Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   });
@@ -340,19 +365,19 @@ mixin _$GenreWatcherState {
   });
 }
 
-abstract class $GenreWatcherStateCopyWith<$Res> {
-  factory $GenreWatcherStateCopyWith(
-          GenreWatcherState value, $Res Function(GenreWatcherState) then) =
-      _$GenreWatcherStateCopyWithImpl<$Res>;
+abstract class $MovieDetailsWatcherStateCopyWith<$Res> {
+  factory $MovieDetailsWatcherStateCopyWith(MovieDetailsWatcherState value,
+          $Res Function(MovieDetailsWatcherState) then) =
+      _$MovieDetailsWatcherStateCopyWithImpl<$Res>;
 }
 
-class _$GenreWatcherStateCopyWithImpl<$Res>
-    implements $GenreWatcherStateCopyWith<$Res> {
-  _$GenreWatcherStateCopyWithImpl(this._value, this._then);
+class _$MovieDetailsWatcherStateCopyWithImpl<$Res>
+    implements $MovieDetailsWatcherStateCopyWith<$Res> {
+  _$MovieDetailsWatcherStateCopyWithImpl(this._value, this._then);
 
-  final GenreWatcherState _value;
+  final MovieDetailsWatcherState _value;
   // ignore: unused_field
-  final $Res Function(GenreWatcherState) _then;
+  final $Res Function(MovieDetailsWatcherState) _then;
 }
 
 abstract class $InitialCopyWith<$Res> {
@@ -360,7 +385,8 @@ abstract class $InitialCopyWith<$Res> {
       _$InitialCopyWithImpl<$Res>;
 }
 
-class _$InitialCopyWithImpl<$Res> extends _$GenreWatcherStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -374,7 +400,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'GenreWatcherState.initial()';
+    return 'MovieDetailsWatcherState.initial()';
   }
 
   @override
@@ -390,7 +416,7 @@ class _$Initial implements Initial {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loadSuccess(GenreResult genre),
+    @required Result loadSuccess(CastResponse cast),
     @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
@@ -405,7 +431,7 @@ class _$Initial implements Initial {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loadSuccess(GenreResult genre),
+    Result loadSuccess(CastResponse cast),
     Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
@@ -448,7 +474,7 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements GenreWatcherState {
+abstract class Initial implements MovieDetailsWatcherState {
   const factory Initial() = _$Initial;
 }
 
@@ -459,7 +485,7 @@ abstract class $DataTransferInProgressCopyWith<$Res> {
 }
 
 class _$DataTransferInProgressCopyWithImpl<$Res>
-    extends _$GenreWatcherStateCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherStateCopyWithImpl<$Res>
     implements $DataTransferInProgressCopyWith<$Res> {
   _$DataTransferInProgressCopyWithImpl(DataTransferInProgress _value,
       $Res Function(DataTransferInProgress) _then)
@@ -474,7 +500,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
 
   @override
   String toString() {
-    return 'GenreWatcherState.loadInProgress()';
+    return 'MovieDetailsWatcherState.loadInProgress()';
   }
 
   @override
@@ -490,7 +516,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loadSuccess(GenreResult genre),
+    @required Result loadSuccess(CastResponse cast),
     @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
@@ -505,7 +531,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loadSuccess(GenreResult genre),
+    Result loadSuccess(CastResponse cast),
     Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
@@ -548,7 +574,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
   }
 }
 
-abstract class DataTransferInProgress implements GenreWatcherState {
+abstract class DataTransferInProgress implements MovieDetailsWatcherState {
   const factory DataTransferInProgress() = _$DataTransferInProgress;
 }
 
@@ -556,11 +582,11 @@ abstract class $LoadSuccessCopyWith<$Res> {
   factory $LoadSuccessCopyWith(
           LoadSuccess value, $Res Function(LoadSuccess) then) =
       _$LoadSuccessCopyWithImpl<$Res>;
-  $Res call({GenreResult genre});
+  $Res call({CastResponse cast});
 }
 
 class _$LoadSuccessCopyWithImpl<$Res>
-    extends _$GenreWatcherStateCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherStateCopyWithImpl<$Res>
     implements $LoadSuccessCopyWith<$Res> {
   _$LoadSuccessCopyWithImpl(
       LoadSuccess _value, $Res Function(LoadSuccess) _then)
@@ -571,36 +597,36 @@ class _$LoadSuccessCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object genre = freezed,
+    Object cast = freezed,
   }) {
     return _then(LoadSuccess(
-      genre == freezed ? _value.genre : genre as GenreResult,
+      cast == freezed ? _value.cast : cast as CastResponse,
     ));
   }
 }
 
 class _$LoadSuccess implements LoadSuccess {
-  const _$LoadSuccess(this.genre) : assert(genre != null);
+  const _$LoadSuccess(this.cast) : assert(cast != null);
 
   @override
-  final GenreResult genre;
+  final CastResponse cast;
 
   @override
   String toString() {
-    return 'GenreWatcherState.loadSuccess(genre: $genre)';
+    return 'MovieDetailsWatcherState.loadSuccess(cast: $cast)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is LoadSuccess &&
-            (identical(other.genre, genre) ||
-                const DeepCollectionEquality().equals(other.genre, genre)));
+            (identical(other.cast, cast) ||
+                const DeepCollectionEquality().equals(other.cast, cast)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(genre);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(cast);
 
   @override
   $LoadSuccessCopyWith<LoadSuccess> get copyWith =>
@@ -611,14 +637,14 @@ class _$LoadSuccess implements LoadSuccess {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loadSuccess(GenreResult genre),
+    @required Result loadSuccess(CastResponse cast),
     @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
-    return loadSuccess(genre);
+    return loadSuccess(cast);
   }
 
   @override
@@ -626,13 +652,13 @@ class _$LoadSuccess implements LoadSuccess {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loadSuccess(GenreResult genre),
+    Result loadSuccess(CastResponse cast),
     Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
     if (loadSuccess != null) {
-      return loadSuccess(genre);
+      return loadSuccess(cast);
     }
     return orElse();
   }
@@ -669,10 +695,10 @@ class _$LoadSuccess implements LoadSuccess {
   }
 }
 
-abstract class LoadSuccess implements GenreWatcherState {
-  const factory LoadSuccess(GenreResult genre) = _$LoadSuccess;
+abstract class LoadSuccess implements MovieDetailsWatcherState {
+  const factory LoadSuccess(CastResponse cast) = _$LoadSuccess;
 
-  GenreResult get genre;
+  CastResponse get cast;
   $LoadSuccessCopyWith<LoadSuccess> get copyWith;
 }
 
@@ -686,7 +712,7 @@ abstract class $LoadFailureCopyWith<$Res> {
 }
 
 class _$LoadFailureCopyWithImpl<$Res>
-    extends _$GenreWatcherStateCopyWithImpl<$Res>
+    extends _$MovieDetailsWatcherStateCopyWithImpl<$Res>
     implements $LoadFailureCopyWith<$Res> {
   _$LoadFailureCopyWithImpl(
       LoadFailure _value, $Res Function(LoadFailure) _then)
@@ -723,7 +749,7 @@ class _$LoadFailure implements LoadFailure {
 
   @override
   String toString() {
-    return 'GenreWatcherState.loadFailure(movieFailure: $movieFailure)';
+    return 'MovieDetailsWatcherState.loadFailure(movieFailure: $movieFailure)';
   }
 
   @override
@@ -748,7 +774,7 @@ class _$LoadFailure implements LoadFailure {
   Result when<Result extends Object>({
     @required Result initial(),
     @required Result loadInProgress(),
-    @required Result loadSuccess(GenreResult genre),
+    @required Result loadSuccess(CastResponse cast),
     @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
@@ -763,7 +789,7 @@ class _$LoadFailure implements LoadFailure {
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
-    Result loadSuccess(GenreResult genre),
+    Result loadSuccess(CastResponse cast),
     Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
@@ -806,7 +832,7 @@ class _$LoadFailure implements LoadFailure {
   }
 }
 
-abstract class LoadFailure implements GenreWatcherState {
+abstract class LoadFailure implements MovieDetailsWatcherState {
   const factory LoadFailure(Failure movieFailure) = _$LoadFailure;
 
   Failure get movieFailure;

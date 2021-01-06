@@ -9,6 +9,7 @@ import 'package:injectable/injectable.dart';
 
 import 'application/genre_watcher/genre_watcher_bloc.dart';
 import 'domain/i_movie_repository.dart';
+import 'application/movie_details_watcher/movie_details_watcher_bloc.dart';
 import 'inferastructure/movie_repository.dart';
 import 'application/movie_watcher/movie_watcher_bloc.dart';
 
@@ -26,6 +27,8 @@ GetIt $initGetIt(
   final gh = GetItHelper(get, environment, environmentFilter);
   gh.lazySingleton<IMovieRepository>(() => MovieRepository(),
       registerFor: {_prod});
+  gh.factory<MovieDetailsWatcherBloc>(
+      () => MovieDetailsWatcherBloc(get<IMovieRepository>()));
   gh.factory<MovieWatcherBloc>(() => MovieWatcherBloc(get<IMovieRepository>()));
   gh.factory<GenreWatcherBloc>(() => GenreWatcherBloc(get<IMovieRepository>()));
   return get;

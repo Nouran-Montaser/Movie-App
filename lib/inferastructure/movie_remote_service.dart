@@ -1,5 +1,6 @@
 import 'package:chopper/chopper.dart';
 import 'package:movie_app/domain/genre/genre_result.dart';
+import 'package:movie_app/domain/cast/cast_response.dart';
 import 'package:movie_app/domain/movie/movie_response.dart';
 import 'package:movie_app/inferastructure/core/ModelConverter.dart';
 import 'package:movie_app/inferastructure/core/custom_interceptor.dart';
@@ -14,6 +15,9 @@ abstract class MovieRemoteService extends ChopperService {
 
   @Get(path: MOVIE_GENRE_PATH)
   Future<Response<GenreResult>> getAllGenre();
+
+  @Get(path: MOVIE_CAST_PATH)
+  Future<Response<CastResponse>> getMovieCast(@Path('movie_id') int id);
 
   static MovieRemoteService create() {
     final client = ChopperClient(

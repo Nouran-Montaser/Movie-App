@@ -23,8 +23,7 @@ class _$MovieWatcherEventTearOff {
   }
 
 // ignore: unused_element
-  _MovieReceived movieReceived(
-      Either<MovieFailure, KtList<Movie>> failureOrMovie) {
+  _MovieReceived movieReceived(Either<Failure, KtList<Movie>> failureOrMovie) {
     return _MovieReceived(
       failureOrMovie,
     );
@@ -40,14 +39,13 @@ mixin _$MovieWatcherEvent {
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
     @required
-        Result movieReceived(
-            Either<MovieFailure, KtList<Movie>> failureOrMovie),
+        Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
-    Result movieReceived(Either<MovieFailure, KtList<Movie>> failureOrMovie),
+    Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -119,8 +117,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
     @required
-        Result movieReceived(
-            Either<MovieFailure, KtList<Movie>> failureOrMovie),
+        Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
@@ -133,7 +130,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
-    Result movieReceived(Either<MovieFailure, KtList<Movie>> failureOrMovie),
+    Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -216,8 +213,7 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
     @required
-        Result movieReceived(
-            Either<MovieFailure, KtList<Movie>> failureOrMovie),
+        Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
@@ -230,7 +226,7 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
-    Result movieReceived(Either<MovieFailure, KtList<Movie>> failureOrMovie),
+    Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -277,7 +273,7 @@ abstract class _$MovieReceivedCopyWith<$Res> {
   factory _$MovieReceivedCopyWith(
           _MovieReceived value, $Res Function(_MovieReceived) then) =
       __$MovieReceivedCopyWithImpl<$Res>;
-  $Res call({Either<MovieFailure, KtList<Movie>> failureOrMovie});
+  $Res call({Either<Failure, KtList<Movie>> failureOrMovie});
 }
 
 class __$MovieReceivedCopyWithImpl<$Res>
@@ -297,7 +293,7 @@ class __$MovieReceivedCopyWithImpl<$Res>
     return _then(_MovieReceived(
       failureOrMovie == freezed
           ? _value.failureOrMovie
-          : failureOrMovie as Either<MovieFailure, KtList<Movie>>,
+          : failureOrMovie as Either<Failure, KtList<Movie>>,
     ));
   }
 }
@@ -306,7 +302,7 @@ class _$_MovieReceived implements _MovieReceived {
   const _$_MovieReceived(this.failureOrMovie) : assert(failureOrMovie != null);
 
   @override
-  final Either<MovieFailure, KtList<Movie>> failureOrMovie;
+  final Either<Failure, KtList<Movie>> failureOrMovie;
 
   @override
   String toString() {
@@ -337,8 +333,7 @@ class _$_MovieReceived implements _MovieReceived {
     @required Result watchAllStarted(),
     @required Result watchUncompletedStarted(),
     @required
-        Result movieReceived(
-            Either<MovieFailure, KtList<Movie>> failureOrMovie),
+        Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
     assert(watchUncompletedStarted != null);
@@ -351,7 +346,7 @@ class _$_MovieReceived implements _MovieReceived {
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
     Result watchUncompletedStarted(),
-    Result movieReceived(Either<MovieFailure, KtList<Movie>> failureOrMovie),
+    Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -391,10 +386,10 @@ class _$_MovieReceived implements _MovieReceived {
 }
 
 abstract class _MovieReceived implements MovieWatcherEvent {
-  const factory _MovieReceived(
-      Either<MovieFailure, KtList<Movie>> failureOrMovie) = _$_MovieReceived;
+  const factory _MovieReceived(Either<Failure, KtList<Movie>> failureOrMovie) =
+      _$_MovieReceived;
 
-  Either<MovieFailure, KtList<Movie>> get failureOrMovie;
+  Either<Failure, KtList<Movie>> get failureOrMovie;
   _$MovieReceivedCopyWith<_MovieReceived> get copyWith;
 }
 
@@ -419,7 +414,7 @@ class _$MovieWatcherStateTearOff {
   }
 
 // ignore: unused_element
-  LoadFailure loadFailure(MovieFailure movieFailure) {
+  LoadFailure loadFailure(Failure movieFailure) {
     return LoadFailure(
       movieFailure,
     );
@@ -435,14 +430,14 @@ mixin _$MovieWatcherState {
     @required Result initial(),
     @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Movie> movie),
-    @required Result loadFailure(MovieFailure movieFailure),
+    @required Result loadFailure(Failure movieFailure),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
     Result loadInProgress(),
     Result loadSuccess(KtList<Movie> movie),
-    Result loadFailure(MovieFailure movieFailure),
+    Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -513,7 +508,7 @@ class _$Initial implements Initial {
     @required Result initial(),
     @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Movie> movie),
-    @required Result loadFailure(MovieFailure movieFailure),
+    @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -528,7 +523,7 @@ class _$Initial implements Initial {
     Result initial(),
     Result loadInProgress(),
     Result loadSuccess(KtList<Movie> movie),
-    Result loadFailure(MovieFailure movieFailure),
+    Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -613,7 +608,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
     @required Result initial(),
     @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Movie> movie),
-    @required Result loadFailure(MovieFailure movieFailure),
+    @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -628,7 +623,7 @@ class _$DataTransferInProgress implements DataTransferInProgress {
     Result initial(),
     Result loadInProgress(),
     Result loadSuccess(KtList<Movie> movie),
-    Result loadFailure(MovieFailure movieFailure),
+    Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -734,7 +729,7 @@ class _$LoadSuccess implements LoadSuccess {
     @required Result initial(),
     @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Movie> movie),
-    @required Result loadFailure(MovieFailure movieFailure),
+    @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -749,7 +744,7 @@ class _$LoadSuccess implements LoadSuccess {
     Result initial(),
     Result loadInProgress(),
     Result loadSuccess(KtList<Movie> movie),
-    Result loadFailure(MovieFailure movieFailure),
+    Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -802,9 +797,9 @@ abstract class $LoadFailureCopyWith<$Res> {
   factory $LoadFailureCopyWith(
           LoadFailure value, $Res Function(LoadFailure) then) =
       _$LoadFailureCopyWithImpl<$Res>;
-  $Res call({MovieFailure movieFailure});
+  $Res call({Failure movieFailure});
 
-  $MovieFailureCopyWith<$Res> get movieFailure;
+  $FailureCopyWith<$Res> get movieFailure;
 }
 
 class _$LoadFailureCopyWithImpl<$Res>
@@ -822,18 +817,16 @@ class _$LoadFailureCopyWithImpl<$Res>
     Object movieFailure = freezed,
   }) {
     return _then(LoadFailure(
-      movieFailure == freezed
-          ? _value.movieFailure
-          : movieFailure as MovieFailure,
+      movieFailure == freezed ? _value.movieFailure : movieFailure as Failure,
     ));
   }
 
   @override
-  $MovieFailureCopyWith<$Res> get movieFailure {
+  $FailureCopyWith<$Res> get movieFailure {
     if (_value.movieFailure == null) {
       return null;
     }
-    return $MovieFailureCopyWith<$Res>(_value.movieFailure, (value) {
+    return $FailureCopyWith<$Res>(_value.movieFailure, (value) {
       return _then(_value.copyWith(movieFailure: value));
     });
   }
@@ -843,7 +836,7 @@ class _$LoadFailure implements LoadFailure {
   const _$LoadFailure(this.movieFailure) : assert(movieFailure != null);
 
   @override
-  final MovieFailure movieFailure;
+  final Failure movieFailure;
 
   @override
   String toString() {
@@ -873,7 +866,7 @@ class _$LoadFailure implements LoadFailure {
     @required Result initial(),
     @required Result loadInProgress(),
     @required Result loadSuccess(KtList<Movie> movie),
-    @required Result loadFailure(MovieFailure movieFailure),
+    @required Result loadFailure(Failure movieFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -888,7 +881,7 @@ class _$LoadFailure implements LoadFailure {
     Result initial(),
     Result loadInProgress(),
     Result loadSuccess(KtList<Movie> movie),
-    Result loadFailure(MovieFailure movieFailure),
+    Result loadFailure(Failure movieFailure),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -931,8 +924,8 @@ class _$LoadFailure implements LoadFailure {
 }
 
 abstract class LoadFailure implements MovieWatcherState {
-  const factory LoadFailure(MovieFailure movieFailure) = _$LoadFailure;
+  const factory LoadFailure(Failure movieFailure) = _$LoadFailure;
 
-  MovieFailure get movieFailure;
+  Failure get movieFailure;
   $LoadFailureCopyWith<LoadFailure> get copyWith;
 }

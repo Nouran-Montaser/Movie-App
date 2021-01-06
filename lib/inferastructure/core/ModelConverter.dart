@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:chopper/chopper.dart';
 import 'package:movie_app/domain/genre/genre_result.dart';
 import 'package:movie_app/domain/movie/movie_response.dart';
+import 'package:movie_app/domain/cast/cast_response.dart';
 
 class ModelConverter implements Converter {
   @override
@@ -35,8 +36,10 @@ class ModelConverter implements Converter {
       var jsonData;
       if (MovieResponse.fromJson(mapData).results != null)
         jsonData = MovieResponse.fromJson(mapData);
-      else
+      else if (GenreResult.fromJson(mapData).genres != null)
         jsonData = GenreResult.fromJson(mapData);
+      else
+        jsonData = CastResponse.fromJson(mapData);
       return response.copyWith<BodyType>(body: jsonData as BodyType);
     } catch (e) {
       chopperLogger.warning(e);

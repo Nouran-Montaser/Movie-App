@@ -52,7 +52,8 @@ class Router extends RouterBase {
       final args = data.getArgs<MoviesDetailsPageArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
         builder: (context) =>
-            MoviesDetailsPage(selectedMovie: args.selectedMovie),
+            MoviesDetailsPage(selectedMovie: args.selectedMovie)
+                .wrappedRoute(context),
         settings: data,
       );
     },
