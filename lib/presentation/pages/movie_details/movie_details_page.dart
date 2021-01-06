@@ -42,8 +42,7 @@ class MoviesDetailsPage extends HookWidget implements AutoRouteWrapper {
             child: CircularProgressIndicator(),
           ),
           loadSuccess: (state) {
-            return MoviesDetailsWidget(
-                selectedMovie: selectedMovie, movieCast: state.cast.cast);
+            return MoviesDetailsWidget(selectedMovie: selectedMovie, movieCast: state.cast.cast);
           },
           loadFailure: (state) {
             print(state.movieFailure);

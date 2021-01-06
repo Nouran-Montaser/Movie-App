@@ -21,7 +21,7 @@ class MovieHeader extends StatelessWidget {
               spacing: 8,
               children: <Widget>[
                 ...movie.genres.map((genre) =>
-                    Text(genre.name, style: TextStyle(fontSize: 14, color: Colors.black87, fontWeight: FontWeight.w900))
+                    Text(genre.name, style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w500))
                 ),
               ],
             ),
@@ -29,15 +29,15 @@ class MovieHeader extends StatelessWidget {
           SizedBox(height: 10.0),
           Row(
             children: [
-              Icon(Icons.timer, size: 20.0),
+              Icon(Icons.timer, size: 20.0, color: Colors.white,),
               SizedBox(width: 5.0),
               Text(
                 "ReleaseDate:  ",
-                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900),
+                style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w400),
               ),
               Text(
                 movie.releaseDate,
-                style: TextStyle(fontSize: 12, color: Colors.black54, fontWeight: FontWeight.w800),
+                style: TextStyle(fontSize: 12, color: Colors.white, fontWeight: FontWeight.w400),
               ),
             ],
           ),

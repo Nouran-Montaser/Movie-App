@@ -36,7 +36,7 @@ class MoviesDetailsWidget extends HookWidget {
   Widget silverAppBarWidget(bool innerViewIsScrolled) {
     return SliverAppBar(
       title: Text(selectedMovie.title),
-      backgroundColor: ACCENT_COLOR,
+      backgroundColor: PRIMARY_DARK_COLOR,
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.pin,
         background: Column(
@@ -49,7 +49,7 @@ class MoviesDetailsWidget extends HookWidget {
       ),
       expandedHeight: ScreenUtil().setHeight(1250),
       pinned: true,
-      floating: true,
+      floating: false,
       elevation: 2.0,
       forceElevated: innerViewIsScrolled,
     );

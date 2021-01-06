@@ -32,6 +32,7 @@ dependencies:
   json_annotation: ^3.0.1
 
   cupertino_icons: ^1.0.1
+  flutter_sparkline: "^0.1.0"
 
 dev_dependencies:
   build_runner:
