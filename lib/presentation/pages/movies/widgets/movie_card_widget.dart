@@ -18,34 +18,37 @@ class MovieCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10.0),
-      ),
-      margin: EdgeInsets.all(6),
-      elevation: 8,
-      clipBehavior: Clip.antiAlias,
-      color: Colors.white60,
-      child: InkWell(
-        onTap: () {
-          ExtendedNavigator.of(context).push(Routes.moviesDetailsPage,
-              arguments: MoviesDetailsPageArguments(selectedMovie: movie));
-        },
-        child: GridTile(
-          footer: Container(
-            color: Colors.white60,
-            child: ListTile(
-              leading: Text(
-                movie.title,
-                style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87),
+    return Hero(
+      tag: "movie-${movie.id}",
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        margin: EdgeInsets.all(6),
+        elevation: 8,
+        clipBehavior: Clip.antiAlias,
+        color: Colors.white60,
+        child: InkWell(
+          onTap: () {
+            ExtendedNavigator.of(context).push(Routes.moviesDetailsPage,
+                arguments: MoviesDetailsPageArguments(selectedMovie: movie));
+          },
+          child: GridTile(
+            footer: Container(
+              color: Colors.white60,
+              child: ListTile(
+                leading: Text(
+                  movie.title,
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
+                ),
               ),
             ),
+            child:
+                Image.network(IMAGE_URL + movie.posterPath, fit: BoxFit.fill),
           ),
-          child:
-              Image.network(IMAGE_URL + movie.posterPath, fit: BoxFit.fill),
         ),
       ),
     );

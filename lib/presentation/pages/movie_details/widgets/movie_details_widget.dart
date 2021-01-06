@@ -20,20 +20,20 @@ class MoviesDetailsWidget extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NestedScrollView(
-        physics: ScrollPhysics(parent: PageScrollPhysics()),
-        headerSliverBuilder: (BuildContext context, bool innerViewIsScrolled) {
-          return <Widget>[
-            silverAppBarWidget(innerViewIsScrolled)
-          ];
-        },
-        body: MovieStorylineCast(movie: selectedMovie, cast: movieCast),
-      ),
+    return CustomScrollView(
+      physics: ClampingScrollPhysics(),
+      slivers: <Widget>[
+        silverAppBarWidget(),
+        SliverList(
+          delegate: SliverChildListDelegate(<Widget>[
+            MovieStorylineCast(movie: selectedMovie, cast: movieCast),
+          ]),
+        ),
+      ],
     );
   }
 
-  Widget silverAppBarWidget(bool innerViewIsScrolled) {
+  Widget silverAppBarWidget() {
     return SliverAppBar(
       title: Text(selectedMovie.title),
       backgroundColor: PRIMARY_DARK_COLOR,
@@ -42,16 +42,15 @@ class MoviesDetailsWidget extends HookWidget {
         background: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            MovieImage(IMAGE_URL + selectedMovie.backdropPath),
+            MovieImage(IMAGE_URL + selectedMovie.backdropPath, selectedMovie.id),
             MovieHeader(selectedMovie, 25.0),
           ],
         ),
       ),
       expandedHeight: ScreenUtil().setHeight(1250),
       pinned: true,
-      floating: false,
+      floating: true,
       elevation: 2.0,
-      forceElevated: innerViewIsScrolled,
     );
   }
 }
