@@ -1,16 +1,19 @@
 # movie_app
 
-A new Flutter application.
+A simple flutter Movie application based on  themoviedb APIs.
 
-## Getting Started
+<p align="center">
+<img src="screenshot1.png"/>
+<img src="screenshot2.png"/>
+<img src="screenshot3.png"/>
+<img src="screenshot4.png"/>
+<img src="screenshot5.png"/>
+</p>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## plugins used
+- [flutter_bloc](https://pub.dev/packages/flutter_bloc) - A Flutter package that helps implement the BLoC pattern.
+- [Chopper](https://pub.dev/packages/chopper) - Chopper is an http client generator using source_gen and inspired by Retrofit.
+- [flutter_screenutil](https://pub.dev/packages/flutter_screenutil) - A flutter plugin for adapting screen and font size.Let your UI display a reasonable layout on different screen sizes.
+- [injectable](https://pub.dev/packages/injectable) - Injectable is a convenient code generator for get_it. Inspired by Angular DI, Guice DI and inject.dart.
+- [auto_route](https://pub.dev/packages/auto_route) - AutoRoute is a declarative routing solution, where everything needed for navigation is automatically generated for you.
+- [sqflite](https://pub.dev/packages/sqflite) - Flutter plugin for SQLite, a self-contained, high-reliability, embedded, SQL database engine.
