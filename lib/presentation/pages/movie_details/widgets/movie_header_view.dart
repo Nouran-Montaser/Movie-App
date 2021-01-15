@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_app/domain/models/movie/movie.dart';
+import 'package:movie_app/presentation/core/app_localizations.dart';
 
 class MovieHeader extends StatelessWidget {
   final Movie movie;
@@ -32,7 +33,7 @@ class MovieHeader extends StatelessWidget {
               Icon(Icons.timer, size: 20.0, color: Colors.white,),
               SizedBox(width: 5.0),
               Text(
-                "ReleaseDate:  ",
+                AppLocalizations.of(context).translate("ReleaseDate:  "),
                 style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w400),
               ),
               Text(

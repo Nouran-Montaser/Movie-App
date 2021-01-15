@@ -47,7 +47,7 @@ class MoviesDetailsWidget extends HookWidget {
           ],
         ),
       ),
-      expandedHeight: ScreenUtil().setHeight(1250),
+      expandedHeight: ScreenUtil().setHeight(1300),
       pinned: true,
       floating: true,
       elevation: 2.0,

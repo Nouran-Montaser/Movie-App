@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:movie_app/domain/models/movie/movie.dart';
 import 'package:movie_app/domain/models/cast/cast.dart';
 import 'package:movie_app/inferastructure/core/constants.dart';
+import 'package:movie_app/presentation/core/app_localizations.dart';
 
 class MovieStorylineCast extends StatelessWidget {
   final Movie movie;
@@ -21,7 +22,7 @@ class MovieStorylineCast extends StatelessWidget {
           children: [
             Flexible(
               child: Text(
-                "Storyline",
+                AppLocalizations.of(context).translate("Storyline"),
                 style: Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.start,
               ),
@@ -36,7 +37,7 @@ class MovieStorylineCast extends StatelessWidget {
             SizedBox(height: 30.0),
             Flexible(
               child: Text(
-                "Cast",
+                AppLocalizations.of(context).translate("Cast"),
                 style: Theme.of(context).textTheme.headline6,
                 textAlign: TextAlign.start,
               ),

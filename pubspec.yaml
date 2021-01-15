@@ -45,12 +45,16 @@ dev_dependencies:
   injectable_generator: ^1.0.4
   auto_route_generator: ^0.6.9
   chopper_generator: ^3.0.4
+  hive_generator: ^0.8.2
   flutter_test:
     sdk: flutter
-  hive_generator: ^0.8.2
+  flutter_localizations:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
 
   assets:
     - sql_commands.txt
+    - lang/en.json
+    - lang/ar.json
