@@ -1,0 +1,25 @@
+CREATE TABLE IF NOT EXISTS movies (
+	popularity	TEXT,
+	poster_path	TEXT,
+	id	INTEGER,
+	backdrop_path	TEXT,
+ 	title	TEXT,
+	overview	TEXT,
+	release_date	TEXT,
+	PRIMARY KEY(id)
+);
+#CREATE TABLE IF NOT EXISTS genres (
+	id	INTEGER,
+	name	TEXT,
+    movieId	INTEGER,
+	PRIMARY KEY(id),
+	FOREIGN KEY(movieId) REFERENCES movie(id)
+);
+#CREATE TABLE IF NOT EXISTS actors (
+	profile_path	TEXT,
+	original_name	TEXT,
+	id	INTEGER,
+    movieId	INTEGER,
+	PRIMARY KEY(id),
+	FOREIGN KEY(movieId) REFERENCES movie(id)
+);
