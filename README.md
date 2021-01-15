@@ -2,7 +2,7 @@
 
 A simple flutter Movie application based on  themoviedb APIs.
 
-<p align="left">
+<p align="center">
 <img src="screenshot5.png" width="130" />
 <img src="screenshot3.png" width="130" />
 <img src="screenshot4.png" width="130" />
