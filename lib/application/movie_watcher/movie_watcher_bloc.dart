@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 import 'package:kt_dart/collection.dart';
 import 'package:meta/meta.dart';
 import 'package:movie_app/domain/i_movie_repository.dart';
-import 'package:movie_app/domain/movie/movie.dart';
+import 'package:movie_app/domain/models/movie/movie.dart';
 import 'package:movie_app/domain/failure.dart';
 
 part 'movie_watcher_event.dart';
@@ -30,7 +30,7 @@ class MovieWatcherBloc extends Bloc<MovieWatcherEvent, MovieWatcherState> {
         await _movieStreamSubscription?.cancel();
         _movieStreamSubscription = _movieRepository.watchAllMovies().listen((movies) => add(MovieWatcherEvent.movieReceived(movies)));
       },
-      watchUncompletedStarted: (e) async* {
+      watchFavoriteStarted: (e) async* {
         yield const MovieWatcherState.loadInProgress();
         await _movieStreamSubscription?.cancel();
         _movieStreamSubscription = _movieRepository.watchFavoriteMovies().listen((movies) => add(MovieWatcherEvent.movieReceived(movies)));

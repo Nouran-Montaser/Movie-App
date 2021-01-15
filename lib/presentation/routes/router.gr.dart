@@ -9,7 +9,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../domain/movie/movie.dart';
+import '../../domain/models/movie/movie.dart';
 import '../pages/movie_details/movie_details_page.dart';
 import '../pages/movies/movies_overview_page.dart';
 import '../pages/splash/splash_page.dart';

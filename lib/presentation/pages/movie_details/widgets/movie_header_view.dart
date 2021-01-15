@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/domain/movie/movie.dart';
+import 'package:movie_app/domain/models/movie/movie.dart';
 
 class MovieHeader extends StatelessWidget {
   final Movie movie;

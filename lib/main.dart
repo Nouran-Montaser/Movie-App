@@ -3,7 +3,7 @@ import 'package:injectable/injectable.dart';
 import 'package:movie_app/injection.dart';
 import 'package:movie_app/presentation/core/app_widget.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureInjection(Environment.prod);
   runApp(AppWidget());

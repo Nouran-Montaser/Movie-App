@@ -18,8 +18,8 @@ class _$MovieWatcherEventTearOff {
   }
 
 // ignore: unused_element
-  _WatchUncompletedStarted watchUncompletedStarted() {
-    return const _WatchUncompletedStarted();
+  _WatchFavoriteStarted watchFavoriteStarted() {
+    return const _WatchFavoriteStarted();
   }
 
 // ignore: unused_element
@@ -37,27 +37,27 @@ mixin _$MovieWatcherEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
+    @required Result watchFavoriteStarted(),
     @required
         Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
-    Result watchUncompletedStarted(),
+    Result watchFavoriteStarted(),
     Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result watchFavoriteStarted(_WatchFavoriteStarted value),
     @required Result movieReceived(_MovieReceived value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result watchFavoriteStarted(_WatchFavoriteStarted value),
     Result movieReceived(_MovieReceived value),
     @required Result orElse(),
   });
@@ -115,12 +115,12 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
+    @required Result watchFavoriteStarted(),
     @required
         Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
     return watchAllStarted();
   }
@@ -129,7 +129,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
-    Result watchUncompletedStarted(),
+    Result watchFavoriteStarted(),
     Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
@@ -144,11 +144,11 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result watchFavoriteStarted(_WatchFavoriteStarted value),
     @required Result movieReceived(_MovieReceived value),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
     return watchAllStarted(this);
   }
@@ -157,7 +157,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result watchFavoriteStarted(_WatchFavoriteStarted value),
     Result movieReceived(_MovieReceived value),
     @required Result orElse(),
   }) {
@@ -173,35 +173,34 @@ abstract class _WatchAllStarted implements MovieWatcherEvent {
   const factory _WatchAllStarted() = _$_WatchAllStarted;
 }
 
-abstract class _$WatchUncompletedStartedCopyWith<$Res> {
-  factory _$WatchUncompletedStartedCopyWith(_WatchUncompletedStarted value,
-          $Res Function(_WatchUncompletedStarted) then) =
-      __$WatchUncompletedStartedCopyWithImpl<$Res>;
+abstract class _$WatchFavoriteStartedCopyWith<$Res> {
+  factory _$WatchFavoriteStartedCopyWith(_WatchFavoriteStarted value,
+          $Res Function(_WatchFavoriteStarted) then) =
+      __$WatchFavoriteStartedCopyWithImpl<$Res>;
 }
 
-class __$WatchUncompletedStartedCopyWithImpl<$Res>
+class __$WatchFavoriteStartedCopyWithImpl<$Res>
     extends _$MovieWatcherEventCopyWithImpl<$Res>
-    implements _$WatchUncompletedStartedCopyWith<$Res> {
-  __$WatchUncompletedStartedCopyWithImpl(_WatchUncompletedStarted _value,
-      $Res Function(_WatchUncompletedStarted) _then)
-      : super(_value, (v) => _then(v as _WatchUncompletedStarted));
+    implements _$WatchFavoriteStartedCopyWith<$Res> {
+  __$WatchFavoriteStartedCopyWithImpl(
+      _WatchFavoriteStarted _value, $Res Function(_WatchFavoriteStarted) _then)
+      : super(_value, (v) => _then(v as _WatchFavoriteStarted));
 
   @override
-  _WatchUncompletedStarted get _value =>
-      super._value as _WatchUncompletedStarted;
+  _WatchFavoriteStarted get _value => super._value as _WatchFavoriteStarted;
 }
 
-class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
-  const _$_WatchUncompletedStarted();
+class _$_WatchFavoriteStarted implements _WatchFavoriteStarted {
+  const _$_WatchFavoriteStarted();
 
   @override
   String toString() {
-    return 'MovieWatcherEvent.watchUncompletedStarted()';
+    return 'MovieWatcherEvent.watchFavoriteStarted()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _WatchUncompletedStarted);
+    return identical(this, other) || (other is _WatchFavoriteStarted);
   }
 
   @override
@@ -211,27 +210,27 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
+    @required Result watchFavoriteStarted(),
     @required
         Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
-    return watchUncompletedStarted();
+    return watchFavoriteStarted();
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
-    Result watchUncompletedStarted(),
+    Result watchFavoriteStarted(),
     Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (watchUncompletedStarted != null) {
-      return watchUncompletedStarted();
+    if (watchFavoriteStarted != null) {
+      return watchFavoriteStarted();
     }
     return orElse();
   }
@@ -240,33 +239,33 @@ class _$_WatchUncompletedStarted implements _WatchUncompletedStarted {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result watchFavoriteStarted(_WatchFavoriteStarted value),
     @required Result movieReceived(_MovieReceived value),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
-    return watchUncompletedStarted(this);
+    return watchFavoriteStarted(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result watchFavoriteStarted(_WatchFavoriteStarted value),
     Result movieReceived(_MovieReceived value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (watchUncompletedStarted != null) {
-      return watchUncompletedStarted(this);
+    if (watchFavoriteStarted != null) {
+      return watchFavoriteStarted(this);
     }
     return orElse();
   }
 }
 
-abstract class _WatchUncompletedStarted implements MovieWatcherEvent {
-  const factory _WatchUncompletedStarted() = _$_WatchUncompletedStarted;
+abstract class _WatchFavoriteStarted implements MovieWatcherEvent {
+  const factory _WatchFavoriteStarted() = _$_WatchFavoriteStarted;
 }
 
 abstract class _$MovieReceivedCopyWith<$Res> {
@@ -331,12 +330,12 @@ class _$_MovieReceived implements _MovieReceived {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result watchAllStarted(),
-    @required Result watchUncompletedStarted(),
+    @required Result watchFavoriteStarted(),
     @required
         Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
     return movieReceived(failureOrMovie);
   }
@@ -345,7 +344,7 @@ class _$_MovieReceived implements _MovieReceived {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result watchAllStarted(),
-    Result watchUncompletedStarted(),
+    Result watchFavoriteStarted(),
     Result movieReceived(Either<Failure, KtList<Movie>> failureOrMovie),
     @required Result orElse(),
   }) {
@@ -360,11 +359,11 @@ class _$_MovieReceived implements _MovieReceived {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result watchAllStarted(_WatchAllStarted value),
-    @required Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    @required Result watchFavoriteStarted(_WatchFavoriteStarted value),
     @required Result movieReceived(_MovieReceived value),
   }) {
     assert(watchAllStarted != null);
-    assert(watchUncompletedStarted != null);
+    assert(watchFavoriteStarted != null);
     assert(movieReceived != null);
     return movieReceived(this);
   }
@@ -373,7 +372,7 @@ class _$_MovieReceived implements _MovieReceived {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result watchAllStarted(_WatchAllStarted value),
-    Result watchUncompletedStarted(_WatchUncompletedStarted value),
+    Result watchFavoriteStarted(_WatchFavoriteStarted value),
     Result movieReceived(_MovieReceived value),
     @required Result orElse(),
   }) {

@@ -3,7 +3,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:movie_app/domain/cast/cast_response.dart';
+import 'package:movie_app/domain/models/cast/cast_response.dart';
 import 'package:movie_app/domain/i_movie_repository.dart';
 import 'package:movie_app/domain/failure.dart';
 

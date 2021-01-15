@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/domain/movie/movie.dart';
-import 'package:movie_app/domain/cast/cast.dart';
+import 'package:movie_app/domain/models/movie/movie.dart';
+import 'package:movie_app/domain/models/cast/cast.dart';
 import 'package:movie_app/inferastructure/core/constants.dart';
 
 class MovieStorylineCast extends StatelessWidget {

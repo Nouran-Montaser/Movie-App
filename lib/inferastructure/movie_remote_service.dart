@@ -1,7 +1,7 @@
 import 'package:chopper/chopper.dart';
-import 'package:movie_app/domain/genre/genre_result.dart';
-import 'package:movie_app/domain/cast/cast_response.dart';
-import 'package:movie_app/domain/movie/movie_response.dart';
+import 'package:movie_app/domain/models/genre/genre_result.dart';
+import 'package:movie_app/domain/models/cast/cast_response.dart';
+import 'package:movie_app/domain/models/movie/movie_response.dart';
 import 'package:movie_app/inferastructure/core/ModelConverter.dart';
 import 'package:movie_app/inferastructure/core/custom_interceptor.dart';
 import 'core/constants.dart';

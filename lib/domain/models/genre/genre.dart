@@ -8,8 +8,10 @@ class Genre {
   int id;
   @JsonKey(name: 'name')
   String name;
+  int movieId;
 
-  Genre({this.id, this.name});
+
+  Genre({this.id, this.name, this.movieId});
   factory Genre.fromJson(Map<String, dynamic> json) => _$GenreFromJson(json);
 
   Map<String, dynamic> toJson() => _$GenreToJson(this);

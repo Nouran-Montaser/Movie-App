@@ -3,10 +3,9 @@ import 'dart:ui';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:movie_app/domain/movie/movie.dart';
+import 'package:movie_app/domain/models/movie/movie.dart';
 import 'package:movie_app/inferastructure/core/constants.dart';
 import 'package:movie_app/presentation/routes/router.gr.dart';
-import 'package:uuid/uuid.dart';
 
 class MovieCard extends StatelessWidget {
   const MovieCard({

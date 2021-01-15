@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:movie_app/domain/movie/movie.dart';
+import 'package:movie_app/domain/models/movie/movie.dart';
 
 part 'movie_response.g.dart';
 
@@ -16,7 +16,6 @@ class MovieResponse {
 
   @JsonKey(name: 'total_results')
   int totalResults;
-
 
   MovieResponse({this.page, this.results, this.totalPages,
       this.totalResults});
