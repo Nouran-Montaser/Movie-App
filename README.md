@@ -2,12 +2,12 @@
 
 A simple flutter Movie application based on  themoviedb APIs.
 
-<p align="center">
-<img src="screenshot1.png"/>
-<img src="screenshot2.png"/>
-<img src="screenshot3.png"/>
-<img src="screenshot4.png"/>
-<img src="screenshot5.png"/>
+<p align="left">
+<img src="screenshot1.png" width="100" />
+<img src="screenshot2.png" width="100" />
+<img src="screenshot3.png" width="100" />
+<img src="screenshot4.png" width="100" />
+<img src="screenshot5.png" width="100" />
 </p>
 
 ## plugins used
