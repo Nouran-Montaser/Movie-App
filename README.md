@@ -3,11 +3,11 @@
 A simple flutter Movie application based on  themoviedb APIs.
 
 <p align="left">
-<img src="screenshot1.png" width="100" />
-<img src="screenshot2.png" width="100" />
-<img src="screenshot3.png" width="100" />
-<img src="screenshot4.png" width="100" />
-<img src="screenshot5.png" width="100" />
+<img src="screenshot5.png" width="130" />
+<img src="screenshot3.png" width="130" />
+<img src="screenshot4.png" width="130" />
+<img src="screenshot2.png" width="130" />
+<img src="screenshot1.png" width="130" />
 </p>
 
 ## plugins used
